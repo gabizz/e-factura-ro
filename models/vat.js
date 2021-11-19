@@ -1,4 +1,4 @@
-const model = props => {
+export const vat = props => {
 
     const { data } = props || {}
 
@@ -175,4 +175,3 @@ const model = props => {
     }
 }
 
-export default model
