@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import model from '../models/vat'
+import {vat, novat} from '../models'
 import { create } from "xmlbuilder2"
 import download from "downloadjs"
 
 
 export default function Home(props) {
 
-  const m = model()
+  const m = vat()
 
   let root = create(m)
   root.end({prettyPrint: true})
