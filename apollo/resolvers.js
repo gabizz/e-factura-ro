@@ -10,7 +10,8 @@ export const resolvers = {
             root = root.end({prettyPrint: true})
             return root
         },
-        json: (root, args, ctx) => {
+        json: (__, args, ctx) => {
+            console.log("args: ", args, ctx)
             return vat()
         }
     }

@@ -6,17 +6,25 @@ import { scalars } from "../../apollo/scalars";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 
 
-const  apolloServer  =  new  ApolloServer({  
+const apolloParams = {
     ...scalars,
     typeDefs, 
     resolvers,
-    playground: true,
-    plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
-}) 
+    plugins: [ApolloServerPluginLandingPageGraphQLPlayground({playground: true})],
+}
+
+const  apolloServer  =  new  ApolloServer(apolloParams) 
 
 const startServer = apolloServer.start();
 
-export default async function handler(req, res) {
+export const config = {
+    api: {
+      bodyParser: false,
+    },
+  };
+
+
+export default async function cors(req, res) {
 
   await startServer;
   await apolloServer.createHandler({
@@ -24,8 +32,3 @@ export default async function handler(req, res) {
   })(req, res);
 }
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};

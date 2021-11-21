@@ -1,6 +1,9 @@
 export const novat = props => {
 
     const {data} = props || {}
+    const {nr, dt, scadenta, supplier, customer, items} = data || {}
+
+
 
     return {
         "Invoice": {

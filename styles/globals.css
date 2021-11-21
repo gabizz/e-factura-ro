@@ -7,10 +7,24 @@ body {
 }
 
 a {
-  color: inherit;
+  color: red;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
 }
+
+
+/* #nav, .nav, #nav .nav li { margin:0px; padding:0px; }
+#nav li {float:left; display:inline; cursor:pointer; list-style:none; padding:15px 10px 10px 14px; position:relative;width:150px;}
+#nav li ul.first {left:-1px; top:100%;width:150px;}
+
+li, li a {color:#000; text-decoration:none;font-weight: 400;}
+#nav .nav li { width:100%; text-indent:10px; line-height:50px; margin-right:10px; background:skyblue;}
+#nav li a {display:block; width:inherit; height:inherit;width:200px;}
+
+ul.nav { display:none; }
+#nav li:hover > a, #nav li:hover { color:navy; background:azure; }
+li:hover > .nav { display:block; position:absolute; width:200px; top:0px; left:100%; z-index:1000; } 
+li:hover { position:relative; z-index:2000; } */

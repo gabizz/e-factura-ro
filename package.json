@@ -8,16 +8,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/cache": "^11.6.0",
+    "@emotion/react": "^11.6.0",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.1.1",
+    "@mui/lab": "^5.0.0-alpha.55",
+    "@mui/material": "^5.1.1",
+    "@mui/styles": "^5.1.1",
     "apollo-server": "^3.5.0",
     "apollo-server-core": "^3.5.0",
     "apollo-server-micro": "^3.5.0",
+    "clsx": "^1.1.1",
     "downloadjs": "^1.4.7",
     "graphql": "^15.7.2",
     "graphql-type-json": "^0.3.2",
     "micro": "^9.3.4",
+    "micro-cors": "^0.1.1",
+    "moment": "^2.29.1",
     "next": "12.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
     "xmlbuilder2": "^3.0.2"
   },
   "devDependencies": {
