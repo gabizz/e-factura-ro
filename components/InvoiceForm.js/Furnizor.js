@@ -51,10 +51,10 @@ export default function Furnizor(props) {
                             {LEGALFORMS.map((e, i) => <MenuItem key={i} value={e.name}><strong>{e.name}</strong> &nbsp;-&nbsp; <small>{e.label}</small></MenuItem>)}
                         </FancyInput>
                     </Grid>
-                    <Grid item xs={10} sm={10}>
+                    <Grid item xs={9} sm={10}>
                         <FancyInput value={supplier.address || ""} onChange={changeHandler("address")} label="ADRESA" />
                     </Grid>
-                    <Grid item xs={2} sm={2}>
+                    <Grid item xs={3} sm={2}>
                         <FancyInput value={supplier.zip || ""} onChange={changeHandler("zip")} label="C.POȘTAL" />
                     </Grid>
                     <Grid item xs={12} sm={4}>

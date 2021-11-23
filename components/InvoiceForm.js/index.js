@@ -57,7 +57,7 @@ export default function InvoiceForm(props) {
                             : (
                                 <Fragment>
                                     <Grid container spacing={1}>
-                                        <Grid item xs = {6}>
+                                        <Grid item xs = {12} sm ={6}>
                                             <RichCard title = "FURNIZOR">
                                                 <small>
                                                     {state.supplier && (
@@ -78,7 +78,7 @@ export default function InvoiceForm(props) {
                                                 </small>
                                             </RichCard>
                                         </Grid>
-                                        <Grid item xs = {6}>
+                                        <Grid item xs = {12} sm ={6}>
                                             <RichCard title = "BENEFICIAR">
                                                 <small>
                                                     {state.customer && (

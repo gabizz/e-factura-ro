@@ -20,12 +20,12 @@ export default function Main(props) {
             let data = ev.target.result
 
             dispatch({...state, ...xml2json(data)})
+
             inputRef.current.value = ""
         }
         reader.readAsBinaryString(file)
-        reader.abort()
+        reader.onloadend = ev => reader.abort()
     }
-
     useEffect(() => { dispatch({ ...DEFAULTINVOICE, items: [DEFALUTITEM] }) }, [])
 
 
