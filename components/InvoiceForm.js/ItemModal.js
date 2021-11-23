@@ -14,7 +14,6 @@ export default function ItemModal({ data, onClose }) {
     const [item, setItem] = useState(null)
 
     useEffect(() => {
-        console.log("effect...")
         setItem(data)
     }, [data])
 
@@ -30,7 +29,7 @@ export default function ItemModal({ data, onClose }) {
             <DialogTitle>
                 <Grid container justifyContent="space-between" alignItems="center">
                     <Grid item><Typography variant="body2">OPERARE ARTICOL</Typography></Grid>
-                    <IconButton color="info" onClick={closeHandler(null)}><FaTimesCircle /></IconButton>
+                    <IconButton color="grey" onClick={closeHandler(null)}><FaTimesCircle /></IconButton>
                 </Grid>
             </DialogTitle>
             <DialogContent>
@@ -38,7 +37,7 @@ export default function ItemModal({ data, onClose }) {
 
                     <Fragment>
                         <br/>
-                        <Grid container justifyContent="flex-start" alignItmes="center" spacing={1}>
+                        <Grid container justifyContent="flex-start" alignItems="center" spacing={1}>
                             <Grid item xs={12} sm={3}>
                                 <FancyInput value= {item.data.name} label="DENUMIRE" onChange = {changeHandler("name")} />
                             </Grid>

@@ -5,7 +5,7 @@ export const BLANKINVOICE = {
     dt: moment(new Date()).format('YYYY-MM-DD'),
     vat: true,
     invoiceType: 380,
-    currency: "RON",
+    currency: "",
     supplier: {
         name: "",
         legalForm: "",
@@ -13,6 +13,7 @@ export const BLANKINVOICE = {
         iban: "",
         bank: "",
         address: "",
+        zip: "",
         city: "",
         county: "",
         country: "",

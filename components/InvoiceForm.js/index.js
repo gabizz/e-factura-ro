@@ -17,12 +17,10 @@ export default function InvoiceForm(props) {
 
     const submitHandler = ev => {
         ev.preventDefault()
-        console.log(state)
     }
 
     const Text = props => props 
         ? <Typography variant = "caption" style = {{fontWeight: 800, paddingRight: "10px"}}>
-            {console.log("props.children: ", props.children)}
             {props.children && props.children.length > 0 ? props.children : "------"}
             </Typography>
         : null
@@ -118,8 +116,7 @@ export default function InvoiceForm(props) {
 
 
                 </Grid>
-                {/* <pre>{JSON.stringify(vat(), null, 4)}</pre> */}
-                <Button type="submit">TRIMITE</Button>
+              
             </form>
         </Fragment>
 

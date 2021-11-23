@@ -51,20 +51,20 @@ export default function Furnizor(props) {
                             {LEGALFORMS.map((e, i) => <MenuItem key={i} value={e.name}><strong>{e.name}</strong> &nbsp;-&nbsp; <small>{e.label}</small></MenuItem>)}
                         </FancyInput>
                     </Grid>
-                    <Grid item xs={12} sm={12}>
+                    <Grid item xs={10} sm={10}>
                         <FancyInput value={supplier.address || ""} onChange={changeHandler("address")} label="ADRESA" />
                     </Grid>
-                    <Grid item xs={6} sm={6}>
+                    <Grid item xs={2} sm={2}>
+                        <FancyInput value={supplier.zip || ""} onChange={changeHandler("zip")} label="C.POȘTAL" />
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                        <FancyInput value={supplier.city || ""} onChange={changeHandler("city")} label="LOCALITATE" />
+                    </Grid>
+                    <Grid item xs={6} sm={4}>
                         <FancyInput value={supplier.county || ""} onChange={changeHandler("county")} label="JUDET" />
                     </Grid>
-                    <Grid item xs={6} sm={6}>
+                    <Grid item xs={6} sm={4}>
                         <FancyInput value={supplier.country || ""} onChange={changeHandler("country")} label="TARA" />
-                    </Grid>
-                    <Grid item xs={12} sm={5}>
-                        <FancyInput value={supplier.bank || ""} onChange={changeHandler("bank")} label="BANCA" />
-                    </Grid>
-                    <Grid item xs={12} sm={7}>
-                        <FancyInput value={supplier.iban || ""} onChange={changeHandler("iban")} label="IBAN" />
                     </Grid>
                     <Grid item xs={6} sm={6}>
                         <FancyInput value={supplier.email || ""} onChange={changeHandler("email")} label="EMAIL" />

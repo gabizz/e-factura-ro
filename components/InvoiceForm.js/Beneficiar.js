@@ -51,20 +51,20 @@ export default function Beneficiar(props) {
                             {LEGALFORMS.map((e, i) => <MenuItem key={i} value={e.name}><strong>{e.name}</strong> &nbsp;-&nbsp; <small>{e.label}</small></MenuItem>)}
                         </FancyInput>
                     </Grid>
-                    <Grid item xs={12} sm={12}>
+                    <Grid item xs={10} sm={10}>
                         <FancyInput value={customer.address || ""} onChange={changeHandler("address")} label="ADRESA" />
                     </Grid>
-                    <Grid item xs={6} sm={6}>
+                    <Grid item xs={2} sm={2}>
+                        <FancyInput value={customer.zip || ""} onChange={changeHandler("zip")} label="C.POȘTAL" />
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                        <FancyInput value={customer.city || ""} onChange={changeHandler("city")} label="LOCALITATE" />
+                    </Grid>
+                    <Grid item xs={6} sm={4}>
                         <FancyInput value={customer.county || ""} onChange={changeHandler("county")} label="JUDET" />
                     </Grid>
-                    <Grid item xs={6} sm={6}>
+                    <Grid item xs={6} sm={4}>
                         <FancyInput value={customer.country || ""} onChange={changeHandler("country")} label="TARA" />
-                    </Grid>
-                    <Grid item xs={12} sm={5}>
-                        <FancyInput value={customer.bank || ""} onChange={changeHandler("bank")} label="BANCA" />
-                    </Grid>
-                    <Grid item xs={12} sm={7}>
-                        <FancyInput value={customer.iban || ""} onChange={changeHandler("iban")} label="IBAN" />
                     </Grid>
                     <Grid item xs={6} sm={6}>
                         <FancyInput value={customer.email || ""} onChange={changeHandler("email")} label="EMAIL" />
