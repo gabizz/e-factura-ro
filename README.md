@@ -1,34 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Am demarat acest proiect cu scopul de a oferi un mod simplu și eficient pentru generarea e-facturii conform specificațiilor
+ANAF.
 
-## Getting Started
+## ROADMAP
+Proiectul este la inceput de drum, dar ne propunem să realizăm următoarele:
+- un API simplu (un endpoint JSON și unul GRAPHQL).  Răspunsul va fi un fișier XML validabil de API-ul ANAF.
+- o interfață web în care să se ppată importa un XML din alte aplicații, în vederea editării, listării, exportului înapoi în XML-ul ANAF
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## CRAZY FEATURES
+- stocarea facturilor emise local într-un storage din browser.
+- bulk import/export din xml sau json
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### HELP WANTED
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Întrucât acest proiect va fi și va râmâne gratuit, orice contribuție este binevenită. Prin "contribuție" înțelegem:
+    - ajutor în dezvoltare - "get your hands dirty" with nodejs, react, apollo server, @mui etc... dacă te ține și dacă ai timp...
+    - testare - încercați tool-ul nostru și spuneți-ne părerea (nu vrem doar laude, criticile constructive sunt mai mult decât binevenite!)
+    - sugestii - dacă aveți vreo idee pentru îmbunătățirea tool-ului, nu exitați să ne-o împărtășiți!
+    - idei - contribuie la acest proiect cu idei noi! (idiots are highly welcome here!!! "idiot" = "om cu idei, nu.... ")
+    - sponsorizări - integrezi tool-ul nostru în soluțiile tale? te ajută să faci mai mulți sau mai ușor bani? let your Karma grow. show some appreciation! (dacă vrei, nu te obligă nimeni, exact ca și cu vaccinul...) 
