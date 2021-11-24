@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<header xmlns="mfp:anaf:dgti:efactura:mesajEroriFactuta:v1" Index_incarcare="200486" Cif_emitent="34612616">
+    <Error errorMessage="E: validari globale&#xA; eroare regula: R6.1: CIF-ul vanzatorului nu figureaza in baza de date:34612616luna:11an:2021"/>
+    <Error errorMessage="E: validari globale&#xA; eroare: CUI-ul cumparatorului nu apartine unei institutii publice:16344256/ CUI-ul cumparatorului:16344256 si CUI-ul vanzatorului:34612616 nu apartin unui operator economic inregistrat in sistem prin registru."/>
+</header>

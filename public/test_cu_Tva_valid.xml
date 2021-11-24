@@ -49,37 +49,37 @@
             </cac:Contact>
         </cac:Party>
     </cac:AccountingSupplierParty>
-     <cac:AccountingCustomerParty>
+    <cac:AccountingCustomerParty>
         <cac:Party>
-            <cbc:EndpointID schemeID="EM">registratura@primariasiria.ro</cbc:EndpointID>
+            <cbc:EndpointID schemeID="EM">client@gmail.com</cbc:EndpointID>
             <cac:PartyIdentification>
-                <cbc:ID>3518920</cbc:ID>
+                <cbc:ID>16344256</cbc:ID>
             </cac:PartyIdentification>
             <cac:PartyName>
-                <cbc:Name>UAT COMUNA SIRIA</cbc:Name>
+                <cbc:Name>PRIMARIA SIRIA</cbc:Name>
             </cac:PartyName>
             <cac:PostalAddress>
-                <cbc:StreetName>str. Reg.85 Infanterie</cbc:StreetName>
-                <cbc:CityName>SIRIA</cbc:CityName>
-                <cbc:PostalZone>317340</cbc:PostalZone>
+                <cbc:StreetName>SIRIA</cbc:StreetName>
+                <cbc:CityName>ARAD</cbc:CityName>
+                <cbc:PostalZone>310329</cbc:PostalZone>
                 <cbc:CountrySubentity>AR</cbc:CountrySubentity>
                 <cac:Country>
                     <cbc:IdentificationCode>RO</cbc:IdentificationCode>
                 </cac:Country>
             </cac:PostalAddress>
             <cac:PartyTaxScheme>
-                <cbc:CompanyID>3518920</cbc:CompanyID>
+                <cbc:CompanyID>RO16344256</cbc:CompanyID>
                 <cac:TaxScheme/>
             </cac:PartyTaxScheme>
             <cac:PartyLegalEntity>
-                <cbc:RegistrationName>UAT COMUNA SIRIA</cbc:RegistrationName>
-                <cbc:CompanyID>3518920</cbc:CompanyID>
-                <cbc:CompanyLegalForm>UAT</cbc:CompanyLegalForm>
+                <cbc:RegistrationName>SIGN PORTAL SRL</cbc:RegistrationName>
+                <cbc:CompanyID>RO16344256</cbc:CompanyID>
+                <cbc:CompanyLegalForm>S.R.L.</cbc:CompanyLegalForm>
             </cac:PartyLegalEntity>
             <cac:Contact>
-                <cbc:Name>BOT VALENTIN</cbc:Name>
+                <cbc:Name>Gabriel Maftei, celalalt eu, de la SRL</cbc:Name>
                 <cbc:Telephone>0744845974</cbc:Telephone>
-                <cbc:ElectronicMail>registratura@primariasiria.ro</cbc:ElectronicMail>
+                <cbc:ElectronicMail>office@signportal.ro</cbc:ElectronicMail>
             </cac:Contact>
         </cac:Party>
     </cac:AccountingCustomerParty>

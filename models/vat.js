@@ -1,6 +1,11 @@
+import moment from "moment"
+
 export const vat = props => {
 
     const { data } = props || {}
+    let {nr, vat, dt, currency, bank, iban, scadenta, supplier, customer, items} = props || {currency:"RON"}
+    customer = customer || {}
+    supplier = supplier || {}
 
     return {
         "Invoice": {
@@ -14,47 +19,47 @@ export const vat = props => {
             "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
             "cbc:UBLVersionID": "2.1",
             "cbc:CustomizationID": "urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.0",
-            "cbc:ID": props.nr+"",
-            "cbc:IssueDate": "2021-11-18",
+            "cbc:ID": nr+"",
+            "cbc:IssueDate": moment(dt).format("YYYY-MM-DD"),
             "cbc:InvoiceTypeCode": "380",
-            "cbc:DocumentCurrencyCode": "RON",
-            "cbc:TaxCurrencyCode": "RON",
+            "cbc:DocumentCurrencyCode": currency || "RON",
+            "cbc:TaxCurrencyCode": currency || "RON",
             "cac:AccountingSupplierParty": {
                 "cac:Party": {
                     "cbc:EndpointID": {
                         "@schemeID": "EM",
-                        "#": "gmaftei@gmail.com"
+                        "#": supplier.email
                     },
                     "cac:PartyIdentification": {
-                        "cbc:ID": "34612616"
+                        "cbc:ID": supplier.cif
                     },
                     "cac:PartyName": {
-                        "cbc:Name": "MAFTEI GABREL-CLAUDIU PFA"
+                        "cbc:Name": supplier.name
                     },
                     "cac:PostalAddress": {
-                        "cbc:StreetName": "SPL.G-RAL GH.MAGARU",
-                        "cbc:CityName": "ARAD",
-                        "cbc:PostalZone": "310329",
-                        "cbc:CountrySubentity": "AR",
+                        "cbc:StreetName": supplier.name,
+                        "cbc:CityName": supplier.city,
+                        "cbc:PostalZone": supplier.cif,
+                        "cbc:CountrySubentity": supplier.county,
                         "cac:Country": {
-                            "cbc:IdentificationCode": "RO"
+                            "cbc:IdentificationCode": supplier.country
                         }
                     },
                     "cac:PartyTaxScheme": {
-                        "cbc:CompanyID": "34612616",
+                        "cbc:CompanyID": supplier.cif,
                         "cac:TaxScheme": {
                             "cbc:ID": "VAT"
                         }
                     },
                     "cac:PartyLegalEntity": {
-                        "cbc:RegistrationName": "MAFTEI GABREL CLAUDIU PFA",
-                        "cbc:CompanyID": "34612616",
-                        "cbc:CompanyLegalForm": "PFA"
+                        "cbc:RegistrationName": supplier.name,
+                        "cbc:CompanyID": supplier.cif,
+                        "cbc:CompanyLegalForm": supplier.legalForm
                     },
                     "cac:Contact": {
-                        "cbc:Name": "Maftei Gabriel - me pe persoana fizica",
-                        "cbc:Telephone": "+40744845974",
-                        "cbc:ElectronicMail": "office@signportal.ro"
+                        "cbc:Name": supplier.representative ? supplier.representative.name : supplier.name,
+                        "cbc:Telephone": supplier.representative ? supplier.representative.phone : supplier.phone,
+                        "cbc:ElectronicMail": supplier.representative ? supplier.representative.email : supplier.email
                     }
                 }
             },
@@ -62,58 +67,58 @@ export const vat = props => {
                 "cac:Party": {
                     "cbc:EndpointID": {
                         "@schemeID": "EM",
-                        "#": "client@gmail.com"
+                        "#": customer.cif,
                     },
                     "cac:PartyIdentification": {
-                        "cbc:ID": "16344256"
+                        "cbc:ID": customer.cif
                     },
                     "cac:PartyName": {
-                        "cbc:Name": "PRIMARIA SIRIA"
+                        "cbc:Name": customer.name
                     },
                     "cac:PostalAddress": {
-                        "cbc:StreetName": "SIRIA",
-                        "cbc:CityName": "ARAD",
-                        "cbc:PostalZone": "310329",
-                        "cbc:CountrySubentity": "AR",
+                        "cbc:StreetName": customer.address,
+                        "cbc:CityName": customer.city,
+                        "cbc:PostalZone": customer.cif,
+                        "cbc:CountrySubentity": customer.county,
                         "cac:Country": {
-                            "cbc:IdentificationCode": "RO"
+                            "cbc:IdentificationCode": customer.country
                         }
                     },
                     "cac:PartyTaxScheme": {
-                        "cbc:CompanyID": "RO16344256",
+                        "cbc:CompanyID": customer.cif,
                         "cac:TaxScheme": {}
                     },
                     "cac:PartyLegalEntity": {
-                        "cbc:RegistrationName": "SIGN PORTAL SRL",
-                        "cbc:CompanyID": "RO16344256",
-                        "cbc:CompanyLegalForm": "S.R.L."
+                        "cbc:RegistrationName": customer.name,
+                        "cbc:CompanyID": customer.name,
+                        "cbc:CompanyLegalForm": customer.legalForm
                     },
                     "cac:Contact": {
-                        "cbc:Name": "Gabriel Maftei, celalalt eu, de la SRL",
-                        "cbc:Telephone": "0744845974",
-                        "cbc:ElectronicMail": "office@signportal.ro"
+                        "cbc:Name": customer.representative ? customer.representative.name : customer.name,
+                        "cbc:Telephone": customer.representative ? customer.representative.phone : customer.phone,
+                        "cbc:ElectronicMail": customer.representative ? customer.representative.email : customer.email,
                     }
                 }
             },
             "cac:PaymentMeans": {
                 "cbc:PaymentMeansCode": "30",
-                "cbc:PaymentID": "BTRL",
+                "cbc:PaymentID": bank,
                 "cac:PayeeFinancialAccount": {
-                    "cbc:ID": "RO67BTRLRONCRT0302934301"
+                    "cbc:ID": iban
                 }
             },
             "cac:TaxTotal": {
                 "cbc:TaxAmount": {
-                    "@currencyID": "RON",
+                    "@currencyID": currency,
                     "#": "150.00"
                 },
                 "cac:TaxSubtotal": {
                     "cbc:TaxableAmount": {
-                        "@currencyID": "RON",
+                        "@currencyID": currency,
                         "#": "3000.00"
                     },
                     "cbc:TaxAmount": {
-                        "@currencyID": "RON",
+                        "@currencyID":currency,
                         "#": "150.00"
                     },
                     "cac:TaxCategory": {
@@ -127,19 +132,19 @@ export const vat = props => {
             },
             "cac:LegalMonetaryTotal": {
                 "cbc:LineExtensionAmount": {
-                    "@currencyID": "RON",
+                    "@currencyID": currency,
                     "#": "3000.00"
                 },
                 "cbc:TaxExclusiveAmount": {
-                    "@currencyID": "RON",
+                    "@currencyID": currency,
                     "#": "3000.00"
                 },
                 "cbc:TaxInclusiveAmount": {
-                    "@currencyID": "RON",
+                    "@currencyID": currency,
                     "#": "3150.00"
                 },
                 "cbc:PayableAmount": {
-                    "@currencyID": "RON",
+                    "@currencyID": currency,
                     "#": "3150.00"
                 }
             },
@@ -150,7 +155,7 @@ export const vat = props => {
                     "#": "1.000"
                 },
                 "cbc:LineExtensionAmount": {
-                    "@currencyID": "RON",
+                    "@currencyID": currency,
                     "#": "3000.00"
                 },
                 "cac:Item": {
@@ -166,7 +171,7 @@ export const vat = props => {
                 },
                 "cac:Price": {
                     "cbc:PriceAmount": {
-                        "@currencyID": "RON",
+                        "@currencyID": currency,
                         "#": "3000.00"
                     }
                 }

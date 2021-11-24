@@ -32,7 +32,7 @@ export default function Main(props) {
 
     const exportXmlHandler = elem => () => {
         
-        download(json2xml(state), `${moment(new Date()).format("YYYY-MM-DD-HH-mm-ss")}-export.xml`, "application/xml")
+        download(json2xml(state), `${moment(new Date()).format("YYYY-MM-DD_HHmm")}-export.xml`, "application/xml")
     }
 
     return (

@@ -68,7 +68,7 @@ export default function InvoiceId(props) {
                 <Grid container justifyContent="flex-start" alignItems="center" spacing={1}>
                     <Grid item xs = {12} sm={2}>
                         <FormControlLabel
-                            control={<FancyInput value={currency || "RON"} select onChange={ev => setState({ ...state, currency: ev.target.value })}>
+                            control={<FancyInput value={currency || ''} select onChange={ev => setState({ ...state, currency: ev.target.value })}>
                                 {["RON", "EUR"].map((e, i) => <MenuItem key={i} value={e}>{e}</MenuItem>)}
                             </FancyInput>
                             }

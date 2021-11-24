@@ -4,7 +4,7 @@ export const novat = props => {
    
     const {nr, vat, dt, currency, bank, iban, scadenta, supplier, customer, items} = props || {currency:"RON"}
 
-
+    console.log("no vat props:", props)
 
     return {
         "Invoice": {
