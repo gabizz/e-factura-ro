@@ -6,6 +6,8 @@ import { BLANKINVOICE } from '../models/blankinvoice'
 import { DEFALUTITEM } from '../models/defaultItem.js'
 import { useAppContext } from '../lib/AppContext.js'
 import { xml2json, json2xml } from "../lib/converters"
+import download from "downloadjs"
+import moment from "moment"
 
 export default function Main(props) {
 
@@ -26,8 +28,12 @@ export default function Main(props) {
         reader.readAsBinaryString(file)
         reader.onloadend = ev => reader.abort()
     }
-    useEffect(() => { dispatch({ ...DEFAULTINVOICE, items: [DEFALUTITEM] }) }, [])
+    useEffect(() => { dispatch({ ...BLANKINVOICE, items: [DEFALUTITEM] }) }, [])
 
+    const exportXmlHandler = elem => () => {
+        
+        download(json2xml(state), `${moment(new Date()).format("YYYY-MM-DD-HH-mm-ss")}-export.xml`, "application/xml")
+    }
 
     return (
         <Fragment>
@@ -61,7 +67,7 @@ export default function Main(props) {
                                 </label>
 
                                 &nbsp;
-                                <Button size="small" variant="info" color="error"> EXPORT XML</Button>
+                                <Button size="small" variant="info" color="error" onClick ={exportXmlHandler(state)}> EXPORT XML</Button>
                             </Grid>
                         </Grid>
                     </Grid>

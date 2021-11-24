@@ -14,7 +14,7 @@ export const vat = props => {
             "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
             "cbc:UBLVersionID": "2.1",
             "cbc:CustomizationID": "urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.0",
-            "cbc:ID": "1",
+            "cbc:ID": props.nr+"",
             "cbc:IssueDate": "2021-11-18",
             "cbc:InvoiceTypeCode": "380",
             "cbc:DocumentCurrencyCode": "RON",
@@ -68,10 +68,10 @@ export const vat = props => {
                         "cbc:ID": "16344256"
                     },
                     "cac:PartyName": {
-                        "cbc:Name": "SIGN PORTAL SRL ARAD"
+                        "cbc:Name": "PRIMARIA SIRIA"
                     },
                     "cac:PostalAddress": {
-                        "cbc:StreetName": "SPL.G-RAL GH.MAGARU",
+                        "cbc:StreetName": "SIRIA",
                         "cbc:CityName": "ARAD",
                         "cbc:PostalZone": "310329",
                         "cbc:CountrySubentity": "AR",

@@ -1,7 +1,8 @@
+import moment from 'moment'
 export const novat = props => {
 
-    const {data} = props || {}
-    const {nr, dt, scadenta, supplier, customer, items} = data || {}
+   
+    const {nr, vat, dt, currency, bank, iban, scadenta, supplier, customer, items} = props || {currency:"RON"}
 
 
 
@@ -17,47 +18,47 @@ export const novat = props => {
             "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
             "cbc:UBLVersionID": "2.1",
             "cbc:CustomizationID": "urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.0",
-            "cbc:ID": "1",
-            "cbc:IssueDate": "2021-11-18",
+            "cbc:ID": nr+"",
+            "cbc:IssueDate": moment(dt).format("YYYY-MM-DD"),
             "cbc:InvoiceTypeCode": "380",
-            "cbc:DocumentCurrencyCode": "RON",
-            "cbc:TaxCurrencyCode": "RON",
+            "cbc:DocumentCurrencyCode": currency,
+            "cbc:TaxCurrencyCode": currency,
             "cac:AccountingSupplierParty": {
                 "cac:Party": {
                     "cbc:EndpointID": {
                         "@schemeID": "EM",
-                        "#": "gmaftei@gmail.com"
+                        "#": supplier.email
                     },
                     "cac:PartyIdentification": {
-                        "cbc:ID": "34612616     "
+                        "cbc:ID":supplier.cif
                     },
                     "cac:PartyName": {
-                        "cbc:Name": "MAFTEI GABREL-CLAUDIU PFA"
+                        "cbc:Name": supplier.name
                     },
                     "cac:PostalAddress": {
-                        "cbc:StreetName": "SPL.G-RAL GH.MAGARU",
-                        "cbc:CityName": "ARAD",
-                        "cbc:PostalZone": "310329",
-                        "cbc:CountrySubentity": "AR",
+                        "cbc:StreetName": supplier.address,
+                        "cbc:CityName": supplier.city,
+                        "cbc:PostalZone": supplier.zip,
+                        "cbc:CountrySubentity": supplier.county,
                         "cac:Country": {
-                            "cbc:IdentificationCode": "RO"
+                            "cbc:IdentificationCode": supplier.country
                         }
                     },
                     "cac:PartyTaxScheme": {
-                        "cbc:CompanyID": "34612616",
+                        "cbc:CompanyID": supplier.cif,
                         "cac:TaxScheme": {
                             "cbc:ID": "VAT"
                         }
                     },
                     "cac:PartyLegalEntity": {
-                        "cbc:RegistrationName": "MAFTEI GABREL CLAUDIU PFA",
-                        "cbc:CompanyID": "34612616",
-                        "cbc:CompanyLegalForm": "PFA"
+                        "cbc:RegistrationName": supplier.name,
+                        "cbc:CompanyID": supplier.cif,
+                        "cbc:CompanyLegalForm": supplier.legalForm
                     },
                     "cac:Contact": {
-                        "cbc:Name": "Maftei Gabriel - me pe persoana fizica",
-                        "cbc:Telephone": "+40744845974",
-                        "cbc:ElectronicMail": "office@signportal.ro"
+                        "cbc:Name": supplier.representative ? supplier.representative.name : supplier.name,
+                        "cbc:Telephone": supplier.representative ? supplier.representative.phone : "000",
+                        "cbc:ElectronicMail": supplier.representative ? supplier.representative.email : supplier.email,
                     }
                 }
             },
@@ -65,44 +66,44 @@ export const novat = props => {
                 "cac:Party": {
                     "cbc:EndpointID": {
                         "@schemeID": "EM",
-                        "#": "client@gmail.com"
+                        "#": customer.email
                     },
                     "cac:PartyIdentification": {
-                        "cbc:ID": "16344256"
+                        "cbc:ID": customer.cif
                     },
                     "cac:PartyName": {
-                        "cbc:Name": "SIGN PORTAL SRL ARAD"
+                        "cbc:Name": customer
                     },
                     "cac:PostalAddress": {
-                        "cbc:StreetName": "SPL.G-RAL GH.MAGARU",
-                        "cbc:CityName": "ARAD",
-                        "cbc:PostalZone": "310329",
-                        "cbc:CountrySubentity": "AR",
+                        "cbc:StreetName": customer.address,
+                        "cbc:CityName": customer.city,
+                        "cbc:PostalZone": customer.zip,
+                        "cbc:CountrySubentity": customer.county,
                         "cac:Country": {
-                            "cbc:IdentificationCode": "RO"
+                            "cbc:IdentificationCode": customer.country
                         }
                     },
                     "cac:PartyTaxScheme": {
-                        "cbc:CompanyID": "RO16344256",
+                        "cbc:CompanyID": customer.cif,
                         "cac:TaxScheme": {}
                     },
                     "cac:PartyLegalEntity": {
-                        "cbc:RegistrationName": "SIGN PORTAL SRL",
-                        "cbc:CompanyID": "RO16344256",
-                        "cbc:CompanyLegalForm": "S.R.L."
+                        "cbc:RegistrationName": customer.name,
+                        "cbc:CompanyID": customer.cif,
+                        "cbc:CompanyLegalForm": customer.legalForm
                     },
                     "cac:Contact": {
-                        "cbc:Name": "Gabriel Maftei, celalalt eu, de la SRL",
-                        "cbc:Telephone": "0744845974",
-                        "cbc:ElectronicMail": "office@signportal.ro"
+                        "cbc:Name": customer.representative ? customer.representative.name : customer.name,
+                        "cbc:Telephone": customer.representative ? customer.representative.phonr : customer.phonr,
+                        "cbc:ElectronicMail": customer.representative ? customer.representative.email : customer.email,
                     }
                 }
             },
             "cac:PaymentMeans": {
                 "cbc:PaymentMeansCode": "30",
-                "cbc:PaymentID": "BTRL",
+                "cbc:PaymentID": bank,
                 "cac:PayeeFinancialAccount": {
-                    "cbc:ID": "RO67BTRLRONCRT0302934301"
+                    "cbc:ID":iban
                 }
             },
             "cac:TaxTotal": {

@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<Invoice xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 ../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.0</cbc:CustomizationID>
+    <cbc:ID>1</cbc:ID>
+    <cbc:IssueDate>2021-11-18</cbc:IssueDate>
+    <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+    <cbc:DocumentCurrencyCode>RON</cbc:DocumentCurrencyCode>
+    <cbc:TaxCurrencyCode>RON</cbc:TaxCurrencyCode>
+    <cac:AccountingSupplierParty>
+        <cac:Party>
+            <cbc:EndpointID schemeID="EM">gmaftei@gmail.com</cbc:EndpointID>
+            <cac:PartyIdentification>
+                <cbc:ID>34612616</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PostalAddress>
+                <cbc:StreetName>SPL.G-RAL GH.MAGHERTU</cbc:StreetName>
+                <cbc:CityName>ARAD</cbc:CityName>
+                <cbc:CountrySubentity>ARAD</cbc:CountrySubentity>
+                <cac:Country>
+                    <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyTaxScheme>
+                <cbc:CompanyID>34612616</cbc:CompanyID>
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>MAFTEI GABREL CLAIDIU PFA</cbc:RegistrationName>
+                <cbc:CompanyID>34612616</cbc:CompanyID>
+                <cbc:CompanyLegalForm>persoana fizica autorizata</cbc:CompanyLegalForm>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:Name>GABRIEL</cbc:Name>
+                <cbc:Telephone>0733222111</cbc:Telephone>
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+    <cac:AccountingCustomerParty>
+        <cac:Party>
+            <cbc:EndpointID schemeID="EM">client@gmail.com</cbc:EndpointID>
+            <cac:PartyIdentification>
+                <cbc:ID>16344256            </cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PostalAddress>
+                <cbc:StreetName>ARAD, arad</cbc:StreetName>
+                <cbc:CityName>ARAD</cbc:CityName>
+                <cbc:CountrySubentity>AR</cbc:CountrySubentity>
+                <cac:Country>
+                    <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyTaxScheme>
+                <cbc:CompanyID>16344256</cbc:CompanyID>
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>SING PORTAL SRL</cbc:RegistrationName>
+                <cbc:CompanyID>16344256</cbc:CompanyID>
+                <cbc:CompanyLegalForm>Societate cu raspundere limitata, TA</cbc:CompanyLegalForm>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:Name>sign portal</cbc:Name>
+                <cbc:Telephone>0744</cbc:Telephone>
+                <cbc:ElectronicMail>client@gmail.com</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+    <cac:TaxTotal>
+        <cbc:TaxAmount currencyID="RON">0.00</cbc:TaxAmount>
+        <cac:TaxSubtotal>
+            <cbc:TaxableAmount currencyID="RON">200.00</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="RON">0.00</cbc:TaxAmount>
+
+            <cac:TaxCategory>
+                
+                <cbc:ID>O</cbc:ID>
+                <cbc:TaxExemptionReasonCode>VATEX-EU-O</cbc:TaxExemptionReasonCode>
+                <cbc:TaxExemptionReason>nu face obiectul TVA</cbc:TaxExemptionReason>
+                
+                <!-- <cbc:Percent>0</cbc:Percent> -->
+
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+
+            </cac:TaxCategory>
+
+        </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:LegalMonetaryTotal>
+        <cbc:LineExtensionAmount currencyID="RON">200.00</cbc:LineExtensionAmount>
+        <cbc:TaxExclusiveAmount currencyID="RON">200.00</cbc:TaxExclusiveAmount>
+        <cbc:TaxInclusiveAmount currencyID="RON">200.00</cbc:TaxInclusiveAmount>
+        <cbc:PayableAmount currencyID="RON">200.00</cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+    <cac:InvoiceLine>
+        <cbc:ID>1</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="H87">2.000</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="RON">200.00</cbc:LineExtensionAmount>
+        <cac:Item>
+            <cbc:Description>Servicii informatice</cbc:Description>
+            <cbc:Name>Servicii informatice</cbc:Name>
+
+            <cac:ClassifiedTaxCategory>
+                <cbc:ID>O</cbc:ID>
+                 <cbc:TaxExemptionReasonCode>VATEX-EU-O</cbc:TaxExemptionReasonCode>
+                <cbc:TaxExemptionReason>nu face obiectul TVA</cbc:TaxExemptionReason>
+                <!-- <cbc:Percent>0</cbc:Percent> -->
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+
+            </cac:ClassifiedTaxCategory>
+                            
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="RON">100.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+</Invoice>

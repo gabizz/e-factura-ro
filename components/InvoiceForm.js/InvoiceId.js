@@ -49,7 +49,10 @@ export default function InvoiceId(props) {
                         <FormControlLabel
                             labelPlacement="start"
                             label={<small>TVA</small>}
-                            control={<Checkbox value={vat || false} onChange={ev => setState({ ...state, vat: ev.target.checked })} />}
+                            control={<Checkbox 
+                                value={vat ?true:false}
+                                checked = {vat?true:false}
+                                onChange={ev => setState({ ...state, vat: ev.target.checked })} />}
                         />
 
                     </Grid>

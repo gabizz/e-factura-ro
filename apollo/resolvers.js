@@ -6,8 +6,8 @@ export const resolvers = {
     Query: {
         xml: (_,args) => {
             
-            let root = create(vat())
-            root = root.end({prettyPrint: true})
+            let root = create(novat())
+            root = root.end({prettyPrint: false})
             return root
         },
         json: (__, args, ctx) => {
