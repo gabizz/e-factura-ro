@@ -16,17 +16,16 @@ export default function Main(props) {
     const [state, dispatch] = useAppContext()
 
     const fileUploadHandler = ev => { 
+        ev.preventDefault()
         let file = ev.target.files[0]
         const reader = new FileReader()
         reader.onload = (ev) => {
             let data = ev.target.result
-
             dispatch({...state, ...xml2json(data)})
-
-            inputRef.current.value = ""
         }
-        reader.readAsBinaryString(file)
-        reader.onloadend = ev => reader.abort()
+        if (file) { reader.readAsBinaryString(file)  }
+
+        reader.onloadend = () => { console.log("ended"); reader.abort(); inputRef.current.files = [], inputRef.current.value = ""}
     }
     useEffect(() => { dispatch({ ...BLANKINVOICE, items: [DEFALUTITEM] }) }, [])
 

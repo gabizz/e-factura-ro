@@ -1,1 +1,131 @@
-<?xml version="1.0"?><Invoice xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 ../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><cbc:UBLVersionID>2.1</cbc:UBLVersionID><cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.0</cbc:CustomizationID><cbc:ID>1</cbc:ID><cbc:IssueDate>2021-11-18</cbc:IssueDate><cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode><cbc:DocumentCurrencyCode>RON</cbc:DocumentCurrencyCode><cbc:TaxCurrencyCode>RON</cbc:TaxCurrencyCode><cac:AccountingSupplierParty><cac:Party><cbc:EndpointID schemeID="EM">office@signportal.ro</cbc:EndpointID><cac:PartyIdentification><cbc:ID>34612616</cbc:ID></cac:PartyIdentification><cac:PartyName><cbc:Name>MAFTEI GABREL CLAUDIU PFA</cbc:Name></cac:PartyName><cac:PostalAddress><cbc:StreetName>MAFTEI GABREL CLAUDIU PFA</cbc:StreetName><cbc:CityName>ARAD</cbc:CityName><cbc:PostalZone>34612616</cbc:PostalZone><cbc:CountrySubentity>AR</cbc:CountrySubentity><cac:Country><cbc:IdentificationCode>RO</cbc:IdentificationCode></cac:Country></cac:PostalAddress><cac:PartyTaxScheme><cbc:CompanyID>34612616</cbc:CompanyID><cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme></cac:PartyTaxScheme><cac:PartyLegalEntity><cbc:RegistrationName>MAFTEI GABREL CLAUDIU PFA</cbc:RegistrationName><cbc:CompanyID>34612616</cbc:CompanyID><cbc:CompanyLegalForm>PFA</cbc:CompanyLegalForm></cac:PartyLegalEntity><cac:Contact><cbc:Name>Maftei Gabriel - me pe persoana fizica</cbc:Name><cbc:Telephone>+40744845974</cbc:Telephone><cbc:ElectronicMail>office@signportal.ro</cbc:ElectronicMail></cac:Contact></cac:Party></cac:AccountingSupplierParty><cac:AccountingCustomerParty><cac:Party><cbc:EndpointID schemeID="EM">RO16344256</cbc:EndpointID><cac:PartyIdentification><cbc:ID>RO16344256</cbc:ID></cac:PartyIdentification><cac:PartyName><cbc:Name>SIGN PORTAL SRL</cbc:Name></cac:PartyName><cac:PostalAddress><cbc:StreetName>SIRIA</cbc:StreetName><cbc:CityName>ARAD</cbc:CityName><cbc:PostalZone>RO16344256</cbc:PostalZone><cbc:CountrySubentity>AR</cbc:CountrySubentity><cac:Country><cbc:IdentificationCode>RO</cbc:IdentificationCode></cac:Country></cac:PostalAddress><cac:PartyTaxScheme><cbc:CompanyID>RO16344256</cbc:CompanyID><cac:TaxScheme/></cac:PartyTaxScheme><cac:PartyLegalEntity><cbc:RegistrationName>SIGN PORTAL SRL</cbc:RegistrationName><cbc:CompanyID>SIGN PORTAL SRL</cbc:CompanyID><cbc:CompanyLegalForm>S.R.L.</cbc:CompanyLegalForm></cac:PartyLegalEntity><cac:Contact><cbc:Name>Gabriel Maftei, celalalt eu, de la SRL</cbc:Name><cbc:Telephone>0744845974</cbc:Telephone><cbc:ElectronicMail>office@signportal.ro</cbc:ElectronicMail></cac:Contact></cac:Party></cac:AccountingCustomerParty><cac:PaymentMeans><cbc:PaymentMeansCode>30</cbc:PaymentMeansCode><cbc:PaymentID>BTRL</cbc:PaymentID><cac:PayeeFinancialAccount><cbc:ID>RO67BTRLRONCRT0302934301</cbc:ID></cac:PayeeFinancialAccount></cac:PaymentMeans><cac:TaxTotal><cbc:TaxAmount currencyID="RON">150.00</cbc:TaxAmount><cac:TaxSubtotal><cbc:TaxableAmount currencyID="RON">3000.00</cbc:TaxableAmount><cbc:TaxAmount currencyID="RON">150.00</cbc:TaxAmount><cac:TaxCategory><cbc:ID>S</cbc:ID><cbc:Percent>5</cbc:Percent><cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme></cac:TaxCategory></cac:TaxSubtotal></cac:TaxTotal><cac:LegalMonetaryTotal><cbc:LineExtensionAmount currencyID="RON">3000.00</cbc:LineExtensionAmount><cbc:TaxExclusiveAmount currencyID="RON">3000.00</cbc:TaxExclusiveAmount><cbc:TaxInclusiveAmount currencyID="RON">3150.00</cbc:TaxInclusiveAmount><cbc:PayableAmount currencyID="RON">3150.00</cbc:PayableAmount></cac:LegalMonetaryTotal><cac:InvoiceLine><cbc:ID>1</cbc:ID><cbc:InvoicedQuantity unitCode="MON">1.000</cbc:InvoicedQuantity><cbc:LineExtensionAmount currencyID="RON">3000.00</cbc:LineExtensionAmount><cac:Item><cbc:Description>Servicii informatice</cbc:Description><cbc:Name>Servicii informatice</cbc:Name><cac:ClassifiedTaxCategory><cbc:ID>S</cbc:ID><cbc:Percent>5</cbc:Percent><cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme></cac:ClassifiedTaxCategory></cac:Item><cac:Price><cbc:PriceAmount currencyID="RON">3000.00</cbc:PriceAmount></cac:Price></cac:InvoiceLine></Invoice>
+<?xml version="1.0"?>
+<Invoice xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 ../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.0</cbc:CustomizationID>
+    <cbc:ID>1</cbc:ID>
+    <cbc:IssueDate>2021-11-18</cbc:IssueDate>
+    <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+    <cbc:DocumentCurrencyCode>RON</cbc:DocumentCurrencyCode>
+    <cbc:TaxCurrencyCode>RON</cbc:TaxCurrencyCode>
+    <cac:AccountingSupplierParty>
+        <cac:Party>
+            <cbc:EndpointID schemeID="EM">office@signportal.ro</cbc:EndpointID>
+            <cac:PartyIdentification>
+                <cbc:ID>34612616</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>MAFTEI GABREL CLAUDIU PFA</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>MAFTEI GABREL CLAUDIU PFA</cbc:StreetName>
+                <cbc:CityName>ARAD</cbc:CityName>
+                <cbc:PostalZone>34612616</cbc:PostalZone>
+                <cbc:CountrySubentity>AR</cbc:CountrySubentity>
+                <cac:Country>
+                    <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyTaxScheme>
+                <cbc:CompanyID>34612616</cbc:CompanyID>
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>MAFTEI GABREL CLAUDIU PFA</cbc:RegistrationName>
+                <cbc:CompanyID>34612616</cbc:CompanyID>
+                <cbc:CompanyLegalForm>PFA</cbc:CompanyLegalForm>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:Name>Maftei Gabriel - me pe persoana fizica</cbc:Name>
+                <cbc:Telephone>+40744845974</cbc:Telephone>
+                <cbc:ElectronicMail>office@signportal.ro</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+    <cac:AccountingCustomerParty>
+        <cac:Party>
+            <cbc:EndpointID schemeID="EM"/>
+            <cac:PartyIdentification>
+                <cbc:ID>RO16344256</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>SIGN PORTAL SRL</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:CityName>ARAD</cbc:CityName>
+                <cbc:PostalZone>RO16344256</cbc:PostalZone>
+                <cbc:CountrySubentity>AR</cbc:CountrySubentity>
+                <cac:Country>
+                    <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyTaxScheme>
+                <cbc:CompanyID>RO16344256</cbc:CompanyID>
+                <cac:TaxScheme/>
+            </cac:PartyTaxScheme>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>SIGN PORTAL SRL</cbc:RegistrationName>
+                <cbc:CompanyID>SIGN PORTAL SRL</cbc:CompanyID>
+                <cbc:CompanyLegalForm>S.R.L.</cbc:CompanyLegalForm>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:Name>Gabriel Maftei, celalalt eu, de la SRL</cbc:Name>
+                <cbc:Telephone>0744845974</cbc:Telephone>
+                <cbc:ElectronicMail>office@signportal.ro</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+    <cac:PaymentMeans>
+        <cbc:PaymentMeansCode>30</cbc:PaymentMeansCode>
+        <cbc:PaymentID>BTRL</cbc:PaymentID>
+        <cac:PayeeFinancialAccount>
+            <cbc:ID>RO67BTRLRONCRT0302934301</cbc:ID>
+        </cac:PayeeFinancialAccount>
+    </cac:PaymentMeans>
+    <cac:TaxTotal>
+        <cbc:TaxAmount currencyID="RON">150.00</cbc:TaxAmount>
+        <cac:TaxSubtotal>
+            <cbc:TaxableAmount currencyID="RON">3000.00</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="RON">150.00</cbc:TaxAmount>
+            <cac:TaxCategory>
+                <cbc:ID>S</cbc:ID>
+                <cbc:Percent>5</cbc:Percent>
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:TaxCategory>
+        </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:LegalMonetaryTotal>
+        <cbc:LineExtensionAmount currencyID="RON">3000.00</cbc:LineExtensionAmount>
+        <cbc:TaxExclusiveAmount currencyID="RON">3000.00</cbc:TaxExclusiveAmount>
+        <cbc:TaxInclusiveAmount currencyID="RON">3150.00</cbc:TaxInclusiveAmount>
+        <cbc:PayableAmount currencyID="RON">3150.00</cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+    <cac:InvoiceLine>
+        <cbc:ID>1</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="RON">1.000</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="RON">3000.00</cbc:LineExtensionAmount>
+        <cac:Item>
+            <cbc:Description>Servicii informatice</cbc:Description>
+            <cbc:Name>Servicii informatice</cbc:Name>
+            <cac:ClassifiedTaxCategory>
+                <cbc:ID>S</cbc:ID>
+                <cbc:Percent>5</cbc:Percent>
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:ClassifiedTaxCategory>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="RON">3000.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+</Invoice>

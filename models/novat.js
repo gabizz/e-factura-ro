@@ -66,13 +66,13 @@ export const novat = props => {
                 "cac:Party": {
                     "cbc:EndpointID": {
                         "@schemeID": "EM",
-                        "#": customer.email
+                        "#": customer.email || customer.cif
                     },
                     "cac:PartyIdentification": {
                         "cbc:ID": customer.cif
                     },
                     "cac:PartyName": {
-                        "cbc:Name": customer
+                        "cbc:Name": customer.name
                     },
                     "cac:PostalAddress": {
                         "cbc:StreetName": customer.address,
