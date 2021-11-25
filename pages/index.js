@@ -78,7 +78,7 @@ export default function Main(props) {
 
                 <InvoiceForm />
                 <small>
-                {/* {state &&  <pre>{JSON.stringify(state, null,2)}</pre>} */}
+                {state &&  <pre>{JSON.stringify(state, null,2)}</pre>}
                 </small>
             </Container>
         </Fragment>

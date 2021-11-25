@@ -3,6 +3,15 @@
 Am demarat acest proiect cu scopul de a oferi un mod simplu și eficient pentru generarea e-facturii conform specificațiilor
 ANAF.
 
+## IN CE STADIU NE AFLĂM ? 
+
++ ***IMPORT XML*** - se poate importa un XML valid (încă nu au fost implementate toate validările posibile, deci s-ar putea să întâmpinați erori dacă xml-ul nu a fost generat din acest tool)
++ ***EXPORT XML*** - se exportă un XML valid (cel puțin pentru DUKIntegrator, validatorul din API-ul ANAF mai introduce o serie de contrângeri, cum ar fi cele legate de înregistrarea prealabilă a CIF furnizor în Registrul e-Factura)
++ ***FORMULARUL WEB*** - form-ul este funcțional, fără validări (deocamndată). Parte de ITEMS din formular este funcțională doar ca prezentare, datele nu se exportă în XML-ul rezultat prin "EXPORT XML".
++ ***GRAPHQL ENDPOINT*** - este funcțional, la adresa https://e-factura-ro.vercel.app/api/graphql (două query-uri au fost deja implementate json() și {xml()} ) însă mai avem de lucrat la răspunsuri
+
+mai avem o serie de neclarități, de ex. cum trebuie să arate xml-ul dacă furnizorul este neplătitor de TVA.vom încerca să cerem un răspuns de la suportul ANAF... încercăm, vedem...
+
 ## ROADMAP
 Proiectul este la inceput de drum, dar ne propunem să realizăm următoarele:
 + un API simplu (un endpoint JSON și unul GRAPHQL).  Răspunsul va fi un fișier XML validabil de API-ul ANAF.
